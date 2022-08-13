@@ -1,0 +1,48 @@
+.memoryGame{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    perspective: 1000px;
+
+    border: 1px solid red;
+}
+
+.memoryCard{
+    position: relative;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 10px 0;
+    width: 15%;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: all .5s ease;
+}
+
+.memoryCard:active{
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+
+.front, .back{
+    backface-visibility: hidden;
+}
+
+.front{
+    transform: rotateY(180deg);
+}
+
+.memoryCard.active{
+    transform: rotateY(180deg);
+}
+
+.memoryCard.wrong{
+    background-color: red;
+}
+
+.memoryCard.correct{
+    background-color: green;
+}

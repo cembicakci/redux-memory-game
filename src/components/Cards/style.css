@@ -6,8 +6,6 @@
     justify-content: center;
     flex-wrap: wrap;
 
-
-    border: 1px solid red;
 }
 
 .memoryCard{
@@ -45,4 +43,8 @@
 
 .memoryCard.correct{
     background-color: green;
+}
+
+.disabled{
+    pointer-events:none;
 }

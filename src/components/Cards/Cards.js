@@ -45,7 +45,6 @@ function Cards() {
     function handleClick(card) {
 
         dispatch(activeToggle(card.id))
-
         setSelectedCards([...selectedCards, card])
     }
 
@@ -54,7 +53,7 @@ function Cards() {
         <section className='memoryGame'>
             {
                 cards.map(card => (
-                    <div key={card.id} className={`memoryCard ${card.status ? 'active' : ''}`} onClick={() => handleClick(card)}>
+                    <div key={card.id} className={`memoryCard ${card.status ? 'active' : ''} ${selectedCards.length === 2 ? 'disabled' : ''}`} onClick={() => handleClick(card)}>
                         <div className='back'>?</div>
                         <div className='front'>
                             <img src={card.img} />

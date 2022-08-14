@@ -5,7 +5,7 @@ export const cardsSlice = createSlice({
     name: 'cards',
     initialState: {
         items: data
-        //sort(() => Math.random() - 0.5)
+        // sort(() => Math.random() - 0.5)
     },
     reducers: {
         activeToggle: (state, action) => {

@@ -1,22 +1,17 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { activeToggle } from '../../redux/cardsSlice'
 import './style.css'
 
 function Cards() {
 
+    const dispatch = useDispatch();
+
     const cards = useSelector(state => state.cards.items)
+    console.log(cards)
 
-    // console.log(cards)
-
-    function handleClick(key, id) {
-        console.log(key)
-
-        let stat = 'active';
-        const cardsCopy = [...cards, cards.stat];
-
-        console.log(cardsCopy)
-
-
+    function handleClick(id) {
+        dispatch(activeToggle(id))
 
     }
 
@@ -25,7 +20,7 @@ function Cards() {
         <section className='memoryGame'>
             {
                 cards.map(card => (
-                    <div key={card.id} className={`memoryCard ${card.status}`} onClick={() => handleClick(card.key, card.id)}>
+                    <div key={card.id} className={`memoryCard ${card.status ? 'active' : ''}`} onClick={() => handleClick(card.id)}>
                         <div className='back'>?</div>
                         <div className='front'>
                             <img src={card.img} />

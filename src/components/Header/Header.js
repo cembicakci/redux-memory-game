@@ -1,8 +1,12 @@
 import React from 'react'
+import './style.css'
 
 function Header() {
   return (
-    <div>Header</div>
+    
+    <header>
+      <h1>Memory Game</h1>
+    </header>
   )
 }
 

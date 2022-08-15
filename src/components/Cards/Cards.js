@@ -8,7 +8,6 @@ function Cards() {
     const dispatch = useDispatch();
 
     const cards = useSelector(state => state.cards.items)
-    console.log(cards)
 
     const [selectedCards, setSelectedCards] = useState([]);
 
@@ -27,6 +26,7 @@ function Cards() {
                 console.log('selected')
                 setSelectedCards([]);
 
+
             } else {
                 setTimeout(() => {
                     dispatch(activeToggle(selectedCards[0].id))
@@ -36,6 +36,11 @@ function Cards() {
                 }, 500)
 
             }
+
+            if(selectedCards.length === 15){
+                
+            }
+
 
         }
     }, [selectedCards])
@@ -53,7 +58,9 @@ function Cards() {
         <section className='memoryGame'>
             {
                 cards.map(card => (
-                    <div key={card.id} className={`memoryCard ${card.status ? 'active' : ''} ${selectedCards.length === 2 ? 'disabled' : ''}`} onClick={() => handleClick(card)}>
+                    <div
+                        key={card.id}
+                        className={`memoryCard ${card.status ? 'active' : ''} ${selectedCards.length === 2 ? 'disabled' : ''}`} onClick={() => handleClick(card)}>
                         <div className='back'>?</div>
                         <div className='front'>
                             <img src={card.img} />

@@ -10,11 +10,12 @@
 
 .memoryCard{
     position: relative;
-    border: 1px solid black;
+    
+    background-color: #FFA500;
     margin: 5px;
-    padding: 10px 0;
     width: 15%;
     transform: scale(1);
+
     transform-style: preserve-3d;
     transition: all .5s ease;
 }
@@ -24,13 +25,16 @@
     transition: transform .2s;
 }
 
-
 .front, .back{
     backface-visibility: hidden;
 }
 
 .front{
     transform: rotateY(180deg);
+}
+
+.back{
+    font-size: 24px;
 }
 
 .memoryCard.active{

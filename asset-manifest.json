@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/redux-memory-game/static/css/main.b46d494a.css",
+    "main.js": "/redux-memory-game/static/js/main.b30dc758.js",
+    "index.html": "/redux-memory-game/index.html",
+    "main.b46d494a.css.map": "/redux-memory-game/static/css/main.b46d494a.css.map",
+    "main.b30dc758.js.map": "/redux-memory-game/static/js/main.b30dc758.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b46d494a.css",
+    "static/js/main.b30dc758.js"
+  ]
+}

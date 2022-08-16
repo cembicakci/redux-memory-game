@@ -52,3 +52,14 @@
 .disabled{
     pointer-events:none;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .back{
+        font-size: 12px;
+    }
+    
+    .memoryCard img{
+        width: 100%;
+    }
+  }

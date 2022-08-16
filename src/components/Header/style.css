@@ -1,24 +1,24 @@
-header{
+header {
     width: 40%;
 }
 
-h1{
+h1 {
     margin: 10px 0;
     color: #000;
     font-size: 36px;
 }
 
-.header-flex{
+.header-flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.header-score{
+.header-score {
     font-size: 18px;
 }
 
-.btn{
+.btn {
     border: none;
     padding: 5px 10px;
     cursor: pointer;
@@ -29,6 +29,23 @@ h1{
 
 }
 
-.btn:active{
+.btn:active {
     transform: scale(.97);
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        font-size: 12px;
+        margin-top: 10px;    
+    }
+
+    .header-flex{
+        flex-direction: column;
+        font-size: 12px;
+    }
 }

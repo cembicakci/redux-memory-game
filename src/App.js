@@ -11,10 +11,12 @@ function App() {
 
   return (
     <div className="App">
-      <Confetti
-        width='1000px'
-        height='1000px'
-      />
+      {
+        selectedAll === 15 && <Confetti
+          width='1000px'
+          height='1000px'
+        />
+      }
       <Header />
       <Cards />
     </div >

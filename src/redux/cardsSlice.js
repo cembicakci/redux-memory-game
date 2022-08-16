@@ -6,17 +6,20 @@ export const cardsSlice = createSlice({
     initialState: {
         items: data,
         // sort(() => Math.random() - 0.5),
+        selectedAll: 0
     },
     reducers: {
         activeToggle: (state, action) => {
             const id = action.payload;
             const item = state.items.find(item => item.id === id)
             item.status = !item.status;
-        }
-
+        },
+        increment: (state) => {
+            state.selectedAll += 1;
+        } 
     }
 })
 
 
-export const { activeToggle } = cardsSlice.actions
+export const { activeToggle, increment } = cardsSlice.actions
 export default cardsSlice.reducer

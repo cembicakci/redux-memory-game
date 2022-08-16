@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { activeToggle } from '../../redux/cardsSlice'
+import { activeToggle, increment } from '../../redux/cardsSlice'
 import './style.css'
 
 function Cards() {
@@ -8,6 +8,7 @@ function Cards() {
     const dispatch = useDispatch();
 
     const cards = useSelector(state => state.cards.items)
+    const selectedAll = useSelector(state => state.cards.selectedAll);
 
     const [selectedCards, setSelectedCards] = useState([]);
 
@@ -25,6 +26,7 @@ function Cards() {
             if (choiceOne == choiceTwo) {
                 console.log('selected')
                 setSelectedCards([]);
+                dispatch(increment())
 
 
             } else {

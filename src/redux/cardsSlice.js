@@ -4,8 +4,7 @@ import data from '../data/data'
 export const cardsSlice = createSlice({
     name: 'cards',
     initialState: {
-        items: data,
-        // sort(() => Math.random() - 0.5),
+        items: data.sort(() => Math.random() - 0.5),
         selectedAll: 0
     },
     reducers: {
@@ -16,10 +15,16 @@ export const cardsSlice = createSlice({
         },
         increment: (state) => {
             state.selectedAll += 1;
-        } 
+        },
+        newGame: (state) => {
+            const shuffle = [...state.items].sort(() => Math.random() - 0.5)
+            state.items = shuffle;
+            state.selectedAll= 0;
+            
+        }
     }
 })
 
 
-export const { activeToggle, increment } = cardsSlice.actions
+export const { activeToggle, increment, newGame } = cardsSlice.actions
 export default cardsSlice.reducer

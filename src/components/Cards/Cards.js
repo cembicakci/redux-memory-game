@@ -8,8 +8,6 @@ function Cards() {
     const dispatch = useDispatch();
 
     const cards = useSelector(state => state.cards.items)
-    const selectedAll = useSelector(state => state.cards.selectedAll);
-
     const [selectedCards, setSelectedCards] = useState([]);
 
     let choiceOne, choiceTwo;

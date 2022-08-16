@@ -13,8 +13,6 @@ function Cards() {
     let choiceOne, choiceTwo;
 
     useEffect(() => {
-        console.log(selectedCards)
-
         if (selectedCards[0] && selectedCards[1]) {
 
             choiceOne = selectedCards[0].key;
@@ -22,7 +20,6 @@ function Cards() {
 
 
             if (choiceOne == choiceTwo) {
-                console.log('selected')
                 setSelectedCards([]);
                 dispatch(increment())
                 dispatch(scoreIncrement())

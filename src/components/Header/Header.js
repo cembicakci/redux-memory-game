@@ -6,8 +6,6 @@ import { useDispatch, useSelector } from 'react-redux'
 function Header() {
 
   const score = useSelector(state => state.cards.score);
-  console.log("score", score)
-
   const dispath = useDispatch();
 
   function handleGame() {

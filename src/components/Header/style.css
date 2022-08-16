@@ -3,3 +3,14 @@ h1{
     color: #000;
     font-size: 36px;
 }
+
+.btn{
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #FFA500;
+    color: #000;
+    font-family: 'Silkscreen', cursive;
+    font-size: 18px;
+
+}

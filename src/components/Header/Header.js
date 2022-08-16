@@ -6,6 +6,7 @@ function Header() {
     
     <header>
       <h1>Memory Game</h1>
+      <button type='button' className='btn'>New Game</button>
     </header>
   )
 }

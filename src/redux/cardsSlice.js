@@ -17,7 +17,8 @@ export const cardsSlice = createSlice({
             state.selectedAll += 1;
         },
         newGame: (state) => {
-            const shuffle = [...state.items].sort(() => Math.random() - 0.5)
+            const shuffle = [...state.items].sort(() => Math.random() - 0.5);
+            state.items.forEach(item => item.status = false);
             state.items = shuffle;
             state.selectedAll= 0;
             

@@ -1,7 +1,21 @@
+header{
+    width: 40%;
+}
+
 h1{
     margin: 10px 0;
     color: #000;
     font-size: 36px;
+}
+
+.header-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-score{
+    font-size: 18px;
 }
 
 .btn{
@@ -13,4 +27,8 @@ h1{
     font-family: 'Silkscreen', cursive;
     font-size: 18px;
 
+}
+
+.btn:active{
+    transform: scale(.97);
 }

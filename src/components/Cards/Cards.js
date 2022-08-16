@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { activeToggle, increment } from '../../redux/cardsSlice'
+import { activeToggle, increment, scoreDecrement, scoreIncrement } from '../../redux/cardsSlice'
 import './style.css'
 
 function Cards() {
@@ -25,12 +25,14 @@ function Cards() {
                 console.log('selected')
                 setSelectedCards([]);
                 dispatch(increment())
+                dispatch(scoreIncrement())
 
 
             } else {
                 setTimeout(() => {
                     dispatch(activeToggle(selectedCards[0].id))
                     dispatch(activeToggle(selectedCards[1].id))
+                    dispatch(scoreDecrement())
 
                     setSelectedCards([])
                 }, 500)

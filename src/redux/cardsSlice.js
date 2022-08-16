@@ -5,7 +5,8 @@ export const cardsSlice = createSlice({
     name: 'cards',
     initialState: {
         items: data.sort(() => Math.random() - 0.5),
-        selectedAll: 0
+        selectedAll: 0,
+        score: 0
     },
     reducers: {
         activeToggle: (state, action) => {
@@ -22,10 +23,20 @@ export const cardsSlice = createSlice({
             state.items = shuffle;
             state.selectedAll= 0;
             
+        },
+        scoreIncrement: (state) => {
+            state.score += 50;
+        },
+        scoreDecrement: (state) => {
+            state.score -= 10
+        },
+        resetScore: (state) => {
+            state.score = 0;
         }
+
     }
 })
 
 
-export const { activeToggle, increment, newGame } = cardsSlice.actions
+export const { activeToggle, increment, newGame, scoreIncrement, scoreDecrement, resetScore } = cardsSlice.actions
 export default cardsSlice.reducer
